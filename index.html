@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Drive Google SV Car</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.dropkick-1.0.0.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=geometry"></script>
+    <script src="map.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    
+    google.maps.event.addDomListener(window, 'load', gdrive.init);
+      
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row controls">
+            <div class="span3">
+              <input id="startloc" type="text" value="" tabindex="1" placeholder="Start Location" class="span3" />
+            </div>
+            <div class="span3">
+              <input id="endloc" type="text" value="" tabindex="2" placeholder="End Location" class="span3" />
+            </div>
+            <div class="span3">
+              <select id="density" value="0" class="span3" tabindex="3" name="density">
+                <option value="0" selected="selected">Choose Density</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+            
+            <div class="span2 control-btn">
+              <span tabindex="4" id="create-video" href="#" class="btn btn-medium btn-block">Create Video</span>
+            </div>
+            
+        </div>
+        <div class="row canvas">
+            <div class="span4">
+                <div class="tile">
+                    <div id="map-canvas" style="height: 300px"></div>
+                </div>
+            </div>
+            <div class="span8">
+                <div class="tile">
+                    <div id="video" style="width: 600px; height: 300px"></div>
+                    <div class="row video-control">
+                        <div class="play-pause"></div>
+                        <div class="restart"><i class="icon-repeat"></i></div>
+                        <div class="span3 select">
+                          <select id="speed" value="0" class="span3" tabindex="5" name="speed">
+                            <option value="0" selected="selected">Choose Speed</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img id="buffer" alt="" style="position:absolute; left:-999px;"/>
+    </div>
+  </body>
+</html>
+
