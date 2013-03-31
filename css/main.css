@@ -88,3 +88,21 @@ body{
 .restart i:hover{
     opacity: 0.5;
 }
+a {
+    text-decoration:none;
+    font-weight:bold;
+}
+.footer_elem{
+    color:white;
+}
+.nav li{
+    padding:8px;
+    font-size:14px;
+}
+.nav{
+    width:100%;
+}
+.nav li:last-of-type{
+    float:right;
+}
+
